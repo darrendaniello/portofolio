@@ -1,664 +1,774 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Darren Daniello — Software Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Darren Daniello, full-stack software developer building web, backend, and AI-integrated applications."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Styles/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Darren Daniello — Software Developer</title>
-  <meta name="description"
-    content="Portfolio of Darren Daniello, full-stack software developer building web, backend, and AI-integrated applications.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="Styles/style.css">
-</head>
+  <body>
+    <div class="custom-cursor" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
 
-<body>
-  <div class="custom-cursor" aria-hidden="true"></div>
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-  <div class="grid-overlay" aria-hidden="true"></div>
+    <nav class="nav" id="nav">
+      <a href="#top" class="nav__mark">DD<span class="nav__cursor">_</span></a>
+      <button
+        class="nav__toggle"
+        id="navToggle"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about">about</a></li>
+        <li><a href="#work">work</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#activity">activity</a></li>
+        <li><a href="#contact" class="nav__cta">contact</a></li>
+      </ul>
+    </nav>
 
-  <nav class="nav" id="nav">
-    <a href="#top" class="nav__mark">DD<span class="nav__cursor">_</span></a>
-    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav__links" id="navLinks">
-      <li><a href="#about">about</a></li>
-      <li><a href="#work">work</a></li>
-      <li><a href="#skills">skills</a></li>
-      <li><a href="#activity">activity</a></li>
-      <li><a href="#contact" class="nav__cta">contact</a></li>
-    </ul>
-  </nav>
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero__inner">
+          <!-- LEFT: HERO TEXT -->
+          <div class="hero__text">
+            <p class="hero__kicker">Jakarta, Indonesia — GMT+7</p>
 
-  <main id="top">
+            <h1 class="hero__title">
+              Darren Daniello builds<br />
+              software that connects<br />
+              <span class="hero__title-accent">
+                people, data, and models.
+              </span>
+            </h1>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero__inner">
-        <div class="hero__text">
-          <p class="hero__kicker">Jakarta, Indonesia — GMT+7</p>
-          <h1 class="hero__title">
-            Darren Daniello builds<br>
-            software that connects<br>
-            <span class="hero__title-accent">people, data, and models.</span>
-          </h1>
-          <p class="hero__lede">
-            Computer Science student at Bina Nusantara University, currently shipping
-            full-stack products end to end — backend services, database design, and
-            AI features wired into real interfaces.
+            <p class="hero__lede">
+              Computer Science student at Bina Nusantara University, currently
+              shipping full-stack products end to end — backend services,
+              database design, and AI features wired into real interfaces.
+            </p>
+
+            <div class="hero__status">
+              <span class="hero__status-dot"></span>
+              <span>Open to software developer opportunities</span>
+            </div>
+
+            <div class="hero__actions">
+              <a href="#work" class="btn btn--primary"> See the work </a>
+
+              <a
+                href="assets/Darren_Daniello_CV.pdf"
+                class="btn btn--ghost"
+                download
+              >
+                Download resume
+              </a>
+            </div>
+          </div>
+
+          <!-- RIGHT: PHOTO + TERMINAL -->
+          <div class="hero__visual">
+            <!-- PROFILE PHOTO -->
+            <div class="hero__photo">
+              <span class="hero__corner hero__corner--tl"></span>
+              <span class="hero__corner hero__corner--tr"></span>
+              <span class="hero__corner hero__corner--bl"></span>
+              <span class="hero__corner hero__corner--br"></span>
+
+              <span class="hero__scan"></span>
+
+              <img
+                src="./assets/photo_profile.png"
+                alt="Darren Daniello"
+                loading="eager"
+              />
+              
+              <div class="hero__photo-label">
+                <span>PROFILE</span>
+                <span>01</span>
+              </div>
+              
+            </div>
+
+            <!-- TERMINAL -->
+            <div class="terminal" id="terminal">
+              <div class="terminal__bar">
+                <span class="dot dot--r"></span>
+                <span class="dot dot--y"></span>
+                <span class="dot dot--g"></span>
+
+                <span class="terminal__title"> darren@binus ~ % </span>
+              </div>
+
+              <div class="terminal__body" id="terminalBody"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="about" id="about">
+        <div class="section-head">
+          <span class="section-tag">01 · about</span>
+          <h2>
+            Fifth-semester CS student, already shipping production-style apps.
+          </h2>
+        </div>
+        <div class="about__grid">
+          <p class="about__body">
+            I study Computer Science at BINUS University with a 3.74 GPA, but
+            most of what I know came from building — a food-waste marketplace, a
+            diabetes risk platform, an AI nutrition chatbot. I work comfortably
+            across the stack: Next.js and Flutter on the front end, NestJS,
+            Django, and FastAPI on the back, PostgreSQL underneath, and
+            increasingly, an LLM somewhere in the flow. I like the parts of a
+            project nobody wants to own — auth systems, payment integration,
+            gluing three moving pieces into one deploy that actually works.
           </p>
-          <div class="hero__status">
-            <span class="hero__status-dot"></span>
-            <span>Open to software developer opportunities</span>
-          </div>
-          <div class="hero__actions">
-            <a href="#work" class="btn btn--primary">See the work</a>
-            <a href="assets/Darren_Daniello_CV.pdf" class="btn btn--ghost" download>Download resume</a>
-          </div>
-        </div>
-
-        <div class="terminal" id="terminal">
-          <div class="terminal__bar">
-            <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
-            <span class="terminal__title">darren@binus ~ %</span>
-          </div>
-          <div class="terminal__body" id="terminalBody"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about" id="about">
-      <div class="section-head">
-        <span class="section-tag">01 · about</span>
-        <h2>Fifth-semester CS student, already shipping production-style apps.</h2>
-      </div>
-      <div class="about__grid">
-        <p class="about__body">
-          I study Computer Science at BINUS University with a 3.74 GPA, but most of what I know
-          came from building — a food-waste marketplace, a diabetes risk platform, an AI nutrition
-          chatbot. I work comfortably across the stack: Next.js and Flutter on the front end,
-          NestJS, Django, and FastAPI on the back, PostgreSQL underneath, and increasingly, an LLM
-          somewhere in the flow. I like the parts of a project nobody wants to own — auth systems,
-          payment integration, gluing three moving pieces into one deploy that actually works.
-        </p>
-        <div class="about__facts">
-          <div class="fact">
-            <span class="fact__label">Education</span>
-            <span class="fact__value">Bina Nusantara University</span>
-            <span class="fact__meta">B.Sc. Computer Science · Aug 2024 – Present</span>
-            <span class="fact__meta">GPA 3.74 / 4.00 (sem. 4)</span>
-          </div>
-          <div class="fact">
-            <span class="fact__label">Focus</span>
-            <span class="fact__value">Backend &amp; systems integration</span>
-            <span class="fact__meta">Auth, payments, APIs, AI wiring</span>
-          </div>
-          <div class="fact">
-            <span class="fact__label">Looking for</span>
-            <span class="fact__value">Software developer roles</span>
-            <span class="fact__meta">Fast-paced engineering teams</span>
+          <div class="about__facts">
+            <div class="fact">
+              <span class="fact__label">Education</span>
+              <span class="fact__value">Bina Nusantara University</span>
+              <span class="fact__meta"
+                >B.Sc. Computer Science · Aug 2024 – Present</span
+              >
+              <span class="fact__meta">GPA 3.74 / 4.00 (sem. 4)</span>
+            </div>
+            <div class="fact">
+              <span class="fact__label">Focus</span>
+              <span class="fact__value">Backend &amp; systems integration</span>
+              <span class="fact__meta">Auth, payments, APIs, AI wiring</span>
+            </div>
+            <div class="fact">
+              <span class="fact__label">Looking for</span>
+              <span class="fact__value">Software developer roles</span>
+              <span class="fact__meta">Fast-paced engineering teams</span>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- WORK -->
-    <section class="work" id="work">
-      <div class="section-head">
-        <span class="section-tag">02 · work</span>
-        <h2>Projects I've built end to end.</h2>
-      </div>
+      <!-- WORK -->
+      <section class="work" id="work">
+        <div class="section-head">
+          <span class="section-tag">02 · work</span>
+          <h2>Projects I've built end to end.</h2>
+        </div>
 
-      <div class="projects">
-
-        <!-- =========================
+        <div class="projects">
+          <!-- =========================
          01 · FoodSaver
         ========================== -->
-        <article class="project project--interactive">
-          <div class="project__meta">
-            <span class="project__year">2026</span>
-            <span class="project__role">Backend developer</span>
-          </div>
-
-          <div class="project__main">
-            <div class="project__heading">
-              <h3>FoodSaver</h3>
-
-              <a href="https://github.com/darrendaniello/food-saver" target="_blank" rel="noopener"
-                class="project__arrow" aria-label="View FoodSaver on GitHub">
-                ↗
-              </a>
+          <article class="project project--interactive">
+            <div class="project__meta">
+              <span class="project__year">2026</span>
+              <span class="project__role">Backend developer</span>
             </div>
 
-            <p class="project__tagline">
-              A two-sided marketplace for surplus food,
-              connecting merchants with discount-seeking buyers
-              to cut food waste.
-            </p>
+            <div class="project__main">
+              <div class="project__heading">
+                <h3>FoodSaver</h3>
 
-            <p class="project__detail">
-              Co-built the backend and database schema alongside
-              a Next.js frontend, then took ownership of the
-              authentication module and integrated Midtrans.
-            </p>
+                <a
+                  href="https://github.com/darrendaniello/food-saver"
+                  target="_blank"
+                  rel="noopener"
+                  class="project__arrow"
+                  aria-label="View FoodSaver on GitHub"
+                >
+                  ↗
+                </a>
+              </div>
 
-            <ul class="project__stack">
-              <li>Next.js 16</li>
-              <li>TypeScript</li>
-              <li>NestJS 11</li>
-              <li>Prisma</li>
-              <li>PostgreSQL</li>
-              <li>Midtrans</li>
-            </ul>
+              <p class="project__tagline">
+                A two-sided marketplace for surplus food, connecting merchants
+                with discount-seeking buyers to cut food waste.
+              </p>
 
-            <button class="project__architecture" data-project="foodsaver">
-              View architecture →
-            </button>
+              <p class="project__detail">
+                Co-built the backend and database schema alongside a Next.js
+                frontend, then took ownership of the authentication module and
+                integrated Midtrans.
+              </p>
 
-            <div class="project__architecture-panel" data-panel="foodsaver" hidden>
-              <div class="architecture">
-                <div class="architecture__node">
-                  Next.js
-                  <small>Frontend</small>
-                </div>
+              <ul class="project__stack">
+                <li>Next.js 16</li>
+                <li>TypeScript</li>
+                <li>NestJS 11</li>
+                <li>Prisma</li>
+                <li>PostgreSQL</li>
+                <li>Midtrans</li>
+              </ul>
 
-                <span>→</span>
+              <button class="project__architecture" data-project="foodsaver">
+                View architecture →
+              </button>
 
-                <div class="architecture__node">
-                  NestJS
-                  <small>REST API</small>
-                </div>
+              <div
+                class="project__architecture-panel"
+                data-panel="foodsaver"
+                hidden
+              >
+                <div class="architecture">
+                  <div class="architecture__node">
+                    Next.js
+                    <small>Frontend</small>
+                  </div>
 
-                <span>→</span>
+                  <span>→</span>
 
-                <div class="architecture__node">
-                  PostgreSQL
-                  <small>Database</small>
+                  <div class="architecture__node">
+                    NestJS
+                    <small>REST API</small>
+                  </div>
+
+                  <span>→</span>
+
+                  <div class="architecture__node">
+                    PostgreSQL
+                    <small>Database</small>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-
-        <!-- =========================
+          <!-- =========================
          02 · GlucoSense
         ========================== -->
-        <article class="project project--interactive">
-          <div class="project__meta">
-            <span class="project__year">2026</span>
-            <span class="project__role">Backend &amp; integration lead</span>
-          </div>
-
-          <div class="project__main">
-            <div class="project__heading">
-              <h3>GlucoSense</h3>
-
-              <a href="https://github.com/darrendaniello/GlucoSense" target="_blank" rel="noopener"
-                class="project__arrow" aria-label="View GlucoSense on GitHub">
-                ↗
-              </a>
+          <article class="project project--interactive">
+            <div class="project__meta">
+              <span class="project__year">2026</span>
+              <span class="project__role">Backend &amp; integration lead</span>
             </div>
 
-            <p class="project__tagline">
-              A diabetes risk-assessment and health-management platform
-              with an AI medical assistant.
-            </p>
+            <div class="project__main">
+              <div class="project__heading">
+                <h3>GlucoSense</h3>
 
-            <p class="project__detail">
-              Owned the backend, database design, and the integration
-              layer connecting frontend, backend, and an LLM chatbot
-              (Groq API). Built the risk-assessment calculator and
-              restructured the project's architecture so all three
-              pieces could deploy as one cohesive flow.
-            </p>
+                <a
+                  href="https://github.com/darrendaniello/GlucoSense"
+                  target="_blank"
+                  rel="noopener"
+                  class="project__arrow"
+                  aria-label="View GlucoSense on GitHub"
+                >
+                  ↗
+                </a>
+              </div>
 
-            <ul class="project__stack">
-              <li>Django</li>
-              <li>PostgreSQL</li>
-              <li>Groq API</li>
-              <li>JWT Auth</li>
-              <li>Vercel</li>
-            </ul>
+              <p class="project__tagline">
+                A diabetes risk-assessment and health-management platform with
+                an AI medical assistant.
+              </p>
 
-            <button class="project__architecture" data-project="glucosense">
-              View architecture →
-            </button>
+              <p class="project__detail">
+                Owned the backend, database design, and the integration layer
+                connecting frontend, backend, and an LLM chatbot (Groq API).
+                Built the risk-assessment calculator and restructured the
+                project's architecture so all three pieces could deploy as one
+                cohesive flow.
+              </p>
 
-            <div class="project__architecture-panel" data-panel="glucosense" hidden>
-              <div class="architecture">
-                <div class="architecture__node">
-                  Frontend
-                  <small>Web App</small>
-                </div>
+              <ul class="project__stack">
+                <li>Django</li>
+                <li>PostgreSQL</li>
+                <li>Groq API</li>
+                <li>JWT Auth</li>
+                <li>Vercel</li>
+              </ul>
 
-                <span>→</span>
+              <button class="project__architecture" data-project="glucosense">
+                View architecture →
+              </button>
 
-                <div class="architecture__node">
-                  Django
-                  <small>REST API</small>
-                </div>
+              <div
+                class="project__architecture-panel"
+                data-panel="glucosense"
+                hidden
+              >
+                <div class="architecture">
+                  <div class="architecture__node">
+                    Frontend
+                    <small>Web App</small>
+                  </div>
 
-                <span>→</span>
+                  <span>→</span>
 
-                <div class="architecture__node">
-                  PostgreSQL
-                  <small>Database</small>
-                </div>
+                  <div class="architecture__node">
+                    Django
+                    <small>REST API</small>
+                  </div>
 
-                <span>→</span>
+                  <span>→</span>
 
-                <div class="architecture__node">
-                  AI Service
-                  <small>Groq API</small>
+                  <div class="architecture__node">
+                    PostgreSQL
+                    <small>Database</small>
+                  </div>
+
+                  <span>→</span>
+
+                  <div class="architecture__node">
+                    AI Service
+                    <small>Groq API</small>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-
-        <!-- =========================
+          <!-- =========================
          03 · AI Nutrition Chatbot
         ========================== -->
-        <article class="project project--interactive">
-          <div class="project__meta">
-            <span class="project__year">2025</span>
-            <span class="project__role">Frontend developer</span>
-          </div>
-
-          <div class="project__main">
-            <div class="project__heading">
-              <h3>AI Nutrition Chatbot for Children</h3>
+          <article class="project project--interactive">
+            <div class="project__meta">
+              <span class="project__year">2025</span>
+              <span class="project__role">Frontend developer</span>
             </div>
 
-            <p class="project__tagline">
-              A chatbot that flags likely vitamin and nutrient
-              deficiencies in children from reported symptoms.
-            </p>
+            <div class="project__main">
+              <div class="project__heading">
+                <h3>AI Nutrition Chatbot for Children</h3>
+              </div>
 
-            <p class="project__detail">
-              Built the chat interface in a framework I hadn't used
-              before, and supported the backend logic behind the
-              recommendation engine that suggests foods to close the
-              identified nutritional gaps.
-            </p>
+              <p class="project__tagline">
+                A chatbot that flags likely vitamin and nutrient deficiencies in
+                children from reported symptoms.
+              </p>
 
-            <ul class="project__stack">
-              <li>Chatbot UI</li>
-              <li>Recommendation logic</li>
-            </ul>
+              <p class="project__detail">
+                Built the chat interface in a framework I hadn't used before,
+                and supported the backend logic behind the recommendation engine
+                that suggests foods to close the identified nutritional gaps.
+              </p>
 
-            <button class="project__architecture" data-project="ai-nutrition">
-              View architecture →
-            </button>
+              <ul class="project__stack">
+                <li>Chatbot UI</li>
+                <li>Recommendation logic</li>
+              </ul>
 
-            <div class="project__architecture-panel" data-panel="ai-nutrition" hidden>
-              <div class="architecture">
-                <div class="architecture__node">
-                  Chat Interface
-                  <small>User Input</small>
-                </div>
+              <button class="project__architecture" data-project="ai-nutrition">
+                View architecture →
+              </button>
 
-                <span>→</span>
+              <div
+                class="project__architecture-panel"
+                data-panel="ai-nutrition"
+                hidden
+              >
+                <div class="architecture">
+                  <div class="architecture__node">
+                    Chat Interface
+                    <small>User Input</small>
+                  </div>
 
-                <div class="architecture__node">
-                  Recommendation Logic
-                  <small>Analysis</small>
-                </div>
+                  <span>→</span>
 
-                <span>→</span>
+                  <div class="architecture__node">
+                    Recommendation Logic
+                    <small>Analysis</small>
+                  </div>
 
-                <div class="architecture__node">
-                  Food Recommendations
-                  <small>Output</small>
+                  <span>→</span>
+
+                  <div class="architecture__node">
+                    Food Recommendations
+                    <small>Output</small>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-
-        <!-- =========================
+          <!-- =========================
          04 · Honkai Star Retail
         ========================== -->
-        <article class="project project--interactive">
-          <div class="project__meta">
-            <span class="project__year">2025</span>
-            <span class="project__role">Mobile · personal</span>
-          </div>
-
-          <div class="project__main">
-            <div class="project__heading">
-              <h3>Honkai Star Retail</h3>
-
-              <a href="https://github.com/darrendaniello/honkai-star-retail" target="_blank" rel="noopener"
-                class="project__arrow" aria-label="View Honkai Star Retail on GitHub">
-                ↗
-              </a>
+          <article class="project project--interactive">
+            <div class="project__meta">
+              <span class="project__year">2025</span>
+              <span class="project__role">Mobile · personal</span>
             </div>
 
-            <p class="project__tagline">
-              A Flutter e-commerce app concept built to get
-              hands-on with mobile development.
-            </p>
+            <div class="project__main">
+              <div class="project__heading">
+                <h3>Honkai Star Retail</h3>
 
-            <p class="project__detail">
-              Solo build exploring Flutter's widget system and
-              app-level state for a product-browsing and checkout
-              flow, outside the university curriculum.
-            </p>
+                <a
+                  href="https://github.com/darrendaniello/honkai-star-retail"
+                  target="_blank"
+                  rel="noopener"
+                  class="project__arrow"
+                  aria-label="View Honkai Star Retail on GitHub"
+                >
+                  ↗
+                </a>
+              </div>
 
-            <ul class="project__stack">
-              <li>Flutter</li>
-              <li>Dart</li>
-              <li>Android Studio</li>
-            </ul>
+              <p class="project__tagline">
+                A Flutter e-commerce app concept built to get hands-on with
+                mobile development.
+              </p>
 
-            <button class="project__architecture" data-project="honkai">
-              View architecture →
-            </button>
+              <p class="project__detail">
+                Solo build exploring Flutter's widget system and app-level state
+                for a product-browsing and checkout flow, outside the university
+                curriculum.
+              </p>
 
-            <div class="project__architecture-panel" data-panel="honkai" hidden>
-              <div class="architecture">
-                <div class="architecture__node">
-                  Flutter UI
-                  <small>Frontend</small>
-                </div>
+              <ul class="project__stack">
+                <li>Flutter</li>
+                <li>Dart</li>
+                <li>Android Studio</li>
+              </ul>
 
-                <span>→</span>
+              <button class="project__architecture" data-project="honkai">
+                View architecture →
+              </button>
 
-                <div class="architecture__node">
-                  Provider
-                  <small>State Management</small>
-                </div>
+              <div
+                class="project__architecture-panel"
+                data-panel="honkai"
+                hidden
+              >
+                <div class="architecture">
+                  <div class="architecture__node">
+                    Flutter UI
+                    <small>Frontend</small>
+                  </div>
 
-                <span>→</span>
+                  <span>→</span>
 
-                <div class="architecture__node">
-                  App Data
-                  <small>Application State</small>
+                  <div class="architecture__node">
+                    Provider
+                    <small>State Management</small>
+                  </div>
+
+                  <span>→</span>
+
+                  <div class="architecture__node">
+                    App Data
+                    <small>Application State</small>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-
-        <!-- =========================
+          <!-- =========================
          05 · Christian Wijaya
         ========================== -->
-        <article class="project project--interactive">
-          <div class="project__meta">
-            <span class="project__year">2025</span>
-            <span class="project__role">Full-stack · solo</span>
-          </div>
-
-          <div class="project__main">
-            <div class="project__heading">
-              <h3>Christian Wijaya — Fashion E-Commerce</h3>
+          <article class="project project--interactive">
+            <div class="project__meta">
+              <span class="project__year">2025</span>
+              <span class="project__role">Full-stack · solo</span>
             </div>
 
-            <p class="project__tagline">
-              An end-to-end catalog, browsing, and purchase flow
-              for a men's branded fashion store.
-            </p>
+            <div class="project__main">
+              <div class="project__heading">
+                <h3>Christian Wijaya — Fashion E-Commerce</h3>
+              </div>
 
-            <p class="project__detail">
-              Designed and built the full site solo, from product
-              catalog structure through to the purchase flow.
-            </p>
+              <p class="project__tagline">
+                An end-to-end catalog, browsing, and purchase flow for a men's
+                branded fashion store.
+              </p>
 
-            <ul class="project__stack">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
+              <p class="project__detail">
+                Designed and built the full site solo, from product catalog
+                structure through to the purchase flow.
+              </p>
 
-            <button class="project__architecture" data-project="christian-wijaya">
-              View architecture →
-            </button>
+              <ul class="project__stack">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
 
-            <div class="project__architecture-panel" data-panel="christian-wijaya" hidden>
-              <div class="architecture">
-                <div class="architecture__node">
-                  HTML
-                  <small>Structure</small>
-                </div>
+              <button
+                class="project__architecture"
+                data-project="christian-wijaya"
+              >
+                View architecture →
+              </button>
 
-                <span>→</span>
+              <div
+                class="project__architecture-panel"
+                data-panel="christian-wijaya"
+                hidden
+              >
+                <div class="architecture">
+                  <div class="architecture__node">
+                    HTML
+                    <small>Structure</small>
+                  </div>
 
-                <div class="architecture__node">
-                  CSS
-                  <small>Styling</small>
-                </div>
+                  <span>→</span>
 
-                <span>→</span>
+                  <div class="architecture__node">
+                    CSS
+                    <small>Styling</small>
+                  </div>
 
-                <div class="architecture__node">
-                  JavaScript
-                  <small>Interaction</small>
+                  <span>→</span>
+
+                  <div class="architecture__node">
+                    JavaScript
+                    <small>Interaction</small>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-
-        <!-- =========================
+          <!-- =========================
          06 · Building Materials Store
         ========================== -->
-        <article class="project project--interactive">
-          <div class="project__meta">
-            <span class="project__year">2026</span>
-            <span class="project__role">Full-stack · solo</span>
-          </div>
-
-          <div class="project__main">
-            <div class="project__heading">
-              <h3>Building Materials Store</h3>
+          <article class="project project--interactive">
+            <div class="project__meta">
+              <span class="project__year">2026</span>
+              <span class="project__role">Full-stack · solo</span>
             </div>
 
-            <p class="project__tagline">
-              A catalog website for a building materials store,
-              built for clear categorization and fast navigation.
-            </p>
+            <div class="project__main">
+              <div class="project__heading">
+                <h3>Building Materials Store</h3>
+              </div>
 
-            <p class="project__detail">
-              Personal project focused on information architecture —
-              organizing a large, unglamorous product catalog so it
-              stays easy to browse.
-            </p>
+              <p class="project__tagline">
+                A catalog website for a building materials store, built for
+                clear categorization and fast navigation.
+              </p>
 
-            <ul class="project__stack">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
+              <p class="project__detail">
+                Personal project focused on information architecture —
+                organizing a large, unglamorous product catalog so it stays easy
+                to browse.
+              </p>
 
-            <button class="project__architecture" data-project="building-materials">
-              View architecture →
-            </button>
+              <ul class="project__stack">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
 
-            <div class="project__architecture-panel" data-panel="building-materials" hidden>
-              <div class="architecture">
-                <div class="architecture__node">
-                  HTML
-                  <small>Structure</small>
-                </div>
+              <button
+                class="project__architecture"
+                data-project="building-materials"
+              >
+                View architecture →
+              </button>
 
-                <span>→</span>
+              <div
+                class="project__architecture-panel"
+                data-panel="building-materials"
+                hidden
+              >
+                <div class="architecture">
+                  <div class="architecture__node">
+                    HTML
+                    <small>Structure</small>
+                  </div>
 
-                <div class="architecture__node">
-                  CSS
-                  <small>Styling</small>
-                </div>
+                  <span>→</span>
 
-                <span>→</span>
+                  <div class="architecture__node">
+                    CSS
+                    <small>Styling</small>
+                  </div>
 
-                <div class="architecture__node">
-                  JavaScript
-                  <small>Interaction</small>
+                  <span>→</span>
+
+                  <div class="architecture__node">
+                    JavaScript
+                    <small>Interaction</small>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
+        </div>
+      </section>
 
-      </div>
-    </section>
+      <!-- ACTIVITY -->
+      <section class="activity" id="activity">
+        <div class="section-head">
+          <span class="section-tag">04 · activity</span>
+          <h2>Outside the codebase.</h2>
+        </div>
+        <ol class="timeline">
+          <li>
+            <span class="timeline__date">Sep 2025 – Sep 2026</span>
+            <div>
+              <h3>Freshmen Partner, HIMTI BINUS</h3>
+              <p>
+                Guided first-year students through university life, campus
+                systems, and extracurricular opportunities.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="timeline__date">Jul 2025 – Sep 2025</span>
+            <div>
+              <h3>Freshmen Leader, HIMTI BINUS</h3>
+              <p>
+                Led a small group of incoming students through the Freshmen Year
+                Program, organizing orientation and team-building sessions.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="timeline__date">Oct 2024 – Present</span>
+            <div>
+              <h3>Member, Himpunan Mahasiswa Teknik Informatika</h3>
+              <p>
+                Active member of BINUS's Computer Science student association.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
 
-    <!-- ACTIVITY -->
-    <section class="activity" id="activity">
-      <div class="section-head">
-        <span class="section-tag">04 · activity</span>
-        <h2>Outside the codebase.</h2>
-      </div>
-      <ol class="timeline">
-        <li>
-          <span class="timeline__date">Sep 2025 – Sep 2026</span>
-          <div>
-            <h3>Freshmen Partner, HIMTI BINUS</h3>
-            <p>Guided first-year students through university life, campus systems, and extracurricular opportunities.
-            </p>
-          </div>
-        </li>
-        <li>
-          <span class="timeline__date">Jul 2025 – Sep 2025</span>
-          <div>
-            <h3>Freshmen Leader, HIMTI BINUS</h3>
-            <p>Led a small group of incoming students through the Freshmen Year Program, organizing orientation and
-              team-building sessions.</p>
-          </div>
-        </li>
-        <li>
-          <span class="timeline__date">Oct 2024 – Present</span>
-          <div>
-            <h3>Member, Himpunan Mahasiswa Teknik Informatika</h3>
-            <p>Active member of BINUS's Computer Science student association.</p>
-          </div>
-        </li>
-      </ol>
-    </section>
-
-    <section class="now" id="now">
-      <div class="section-head">
-        <span class="section-tag">05 · now</span>
-        <h2>What I'm working on right now.</h2>
-      </div>
-
-      <div class="now__grid">
-
-        <article class="now__item">
-          <span class="now__number">01</span>
-
-          <div>
-            <span class="now__status">BUILDING</span>
-            <h3>SupplyHub</h3>
-            <p>
-              Building a buyer-focused marketplace backend with
-              PostgreSQL, PostGIS, SQLAlchemy, and AI-powered
-              forecasting.
-            </p>
-          </div>
-        </article>
-
-        <article class="now__item">
-          <span class="now__number">02</span>
-
-          <div>
-            <span class="now__status">EXPLORING</span>
-            <h3>Backend Architecture</h3>
-            <p>
-              Improving API design, repository patterns,
-              database architecture, and service integration.
-            </p>
-          </div>
-        </article>
-
-        <article class="now__item">
-          <span class="now__number">03</span>
-
-          <div>
-            <span class="now__status">LEARNING</span>
-            <h3>AI Integration</h3>
-            <p>
-              Exploring practical ways to connect AI services
-              with production-style backend systems.
-            </p>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <section class="github" id="github">
-      <div class="section-head">
-        <span class="section-tag">06 · github</span>
-        <h2>Building in public.</h2>
-      </div>
-
-      <div class="github__panel">
-
-        <div class="github__stats" id="githubStats">
-          <div>
-            <span class="github__stat-value">—</span>
-            <span class="github__stat-label">repositories</span>
-          </div>
-
-          <div>
-            <span class="github__stat-value">—</span>
-            <span class="github__stat-label">followers</span>
-          </div>
-
-          <div>
-            <span class="github__stat-value">—</span>
-            <span class="github__stat-label">following</span>
-          </div>
+      <section class="now" id="now">
+        <div class="section-head">
+          <span class="section-tag">05 · now</span>
+          <h2>What I'm working on right now.</h2>
         </div>
 
-        <div class="github__graph">
-          <div class="github__graph-header">
-            <span>Contribution activity</span>
-            <span id="githubContributionTotal">—</span>
+        <div class="now__grid">
+          <article class="now__item">
+            <span class="now__number">01</span>
+
+            <div>
+              <span class="now__status">BUILDING</span>
+              <h3>SupplyHub</h3>
+              <p>
+                Building a buyer-focused marketplace backend with PostgreSQL,
+                PostGIS, SQLAlchemy, and AI-powered forecasting.
+              </p>
+            </div>
+          </article>
+
+          <article class="now__item">
+            <span class="now__number">02</span>
+
+            <div>
+              <span class="now__status">EXPLORING</span>
+              <h3>Backend Architecture</h3>
+              <p>
+                Improving API design, repository patterns, database
+                architecture, and service integration.
+              </p>
+            </div>
+          </article>
+
+          <article class="now__item">
+            <span class="now__number">03</span>
+
+            <div>
+              <span class="now__status">LEARNING</span>
+              <h3>AI Integration</h3>
+              <p>
+                Exploring practical ways to connect AI services with
+                production-style backend systems.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="github" id="github">
+        <div class="section-head">
+          <span class="section-tag">06 · github</span>
+          <h2>Building in public.</h2>
+        </div>
+
+        <div class="github__panel">
+          <div class="github__stats" id="githubStats">
+            <div>
+              <span class="github__stat-value">—</span>
+              <span class="github__stat-label">repositories</span>
+            </div>
+
+            <div>
+              <span class="github__stat-value">—</span>
+              <span class="github__stat-label">followers</span>
+            </div>
+
+            <div>
+              <span class="github__stat-value">—</span>
+              <span class="github__stat-label">following</span>
+            </div>
           </div>
 
-          <div class="github__contributions" id="githubContributions" aria-label="GitHub contribution activity"></div>
+          <div class="github__graph">
+            <div class="github__graph-header">
+              <span>Contribution activity</span>
+              <span id="githubContributionTotal">—</span>
+            </div>
+
+            <div
+              class="github__contributions"
+              id="githubContributions"
+              aria-label="GitHub contribution activity"
+            ></div>
+          </div>
+
+          <a
+            href="https://github.com/darrendaniello"
+            target="_blank"
+            rel="noopener"
+            class="github__link"
+          >
+            View GitHub profile ↗
+          </a>
         </div>
+      </section>
 
-        <a href="https://github.com/darrendaniello" target="_blank" rel="noopener" class="github__link">
-          View GitHub profile ↗
-        </a>
-
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-      <div class="contact__inner">
-        <h2>Building something? Let's talk.</h2>
-        <p>Open to software developer roles and collaborations — reach out directly.</p>
-        <div class="contact__links">
-          <a href="mailto:darrendaniello62@gmail.com">darrendaniello62@gmail.com</a>
-          <a href="tel:+6281234293292">+62 812-3429-3292</a>
-          <a href="https://www.linkedin.com/in/darren-daniello-714446330/" target="_blank" rel="noopener">LinkedIn</a>
+      <!-- CONTACT -->
+      <section class="contact" id="contact">
+        <div class="contact__inner">
+          <h2>Building something? Let's talk.</h2>
+          <p>
+            Open to software developer roles and collaborations — reach out
+            directly.
+          </p>
+          <div class="contact__links">
+            <a href="mailto:darrendaniello62@gmail.com"
+              >darrendaniello62@gmail.com</a
+            >
+            <a href="tel:+6281234293292">+62 812-3429-3292</a>
+            <a
+              href="https://www.linkedin.com/in/darren-daniello-714446330/"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-  </main>
+    <footer class="footer">
+      <span>Darren Daniello © 2026</span>
+      <span>Built with HTML, CSS &amp; JS</span>
+    </footer>
 
-  <footer class="footer">
-    <span>Darren Daniello © 2026</span>
-    <span>Built with HTML, CSS &amp; JS</span>
-  </footer>
-
-  <script type="module" src="Scripts/main.js"></script>
-</body>
-
+    <script type="module" src="Scripts/main.js"></script>
+  </body>
 </html>

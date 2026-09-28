@@ -234,7 +234,6 @@ main, .nav, .footer{ position: relative; z-index: 1; }
 }
 .btn--ghost:hover{ border-color: var(--cyan); color: var(--cyan); }
 
-/* Terminal panel */
 .terminal{
   background: var(--surface);
   border: 1px solid var(--border-strong);
@@ -278,6 +277,325 @@ main, .nav, .footer{ position: relative; z-index: 1; }
   vertical-align: middle;
   animation: blink 1s step-end infinite;
 }
+
+.hero__visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+}
+
+/* =========================================================
+   Profile Frame
+========================================================= */
+
+.hero__photo {
+  position: relative;
+
+  width: 190px;
+  height: 190px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(53, 230, 255, 0.28);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(53, 230, 255, 0.055),
+      rgba(168, 119, 255, 0.035) 55%,
+      rgba(215, 82, 255, 0.025)
+    );
+
+  box-shadow:
+    0 0 0 1px rgba(53, 230, 255, 0.035),
+    0 0 30px rgba(53, 230, 255, 0.07),
+    inset 0 0 30px rgba(53, 230, 255, 0.025);
+
+  clip-path: polygon(
+    12px 0,
+    calc(100% - 12px) 0,
+    100% 12px,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    12px 100%,
+    0 calc(100% - 12px),
+    0 12px
+  );
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   Inner Frame
+========================================================= */
+
+.hero__photo::before {
+  content: "";
+
+  position: absolute;
+  inset: 7px;
+
+  border: 1px solid rgba(168, 119, 255, 0.16);
+
+  clip-path: polygon(
+    8px 0,
+    calc(100% - 8px) 0,
+    100% 8px,
+    100% calc(100% - 8px),
+    calc(100% - 8px) 100%,
+    8px 100%,
+    0 calc(100% - 8px),
+    0 8px
+  );
+
+  pointer-events: none;
+  z-index: 3;
+}
+
+
+/* =========================================================
+   Cyan Glow
+========================================================= */
+
+.hero__photo::after {
+  content: "";
+
+  position: absolute;
+
+  width: 100px;
+  height: 100px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background: rgba(53, 230, 255, 0.08);
+
+  filter: blur(45px);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+
+/* =========================================================
+   Profile Image
+========================================================= */
+
+.hero__photo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+  object-position: center;
+
+  filter:
+    drop-shadow(0 14px 24px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 0 18px rgba(53, 230, 255, 0.08));
+
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+
+  position: relative;
+  z-index: 1;
+}
+
+
+.hero__photo:hover img {
+  transform: translateY(-4px);
+
+  filter:
+    drop-shadow(0 18px 28px rgba(0, 0, 0, 0.55))
+    drop-shadow(0 0 25px rgba(53, 230, 255, 0.16));
+}
+
+
+/* =========================================================
+   HUD Corner Markers
+========================================================= */
+
+.hero__corner {
+  position: absolute;
+
+  width: 18px;
+  height: 18px;
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
+
+/* Top Left */
+
+.hero__corner--tl {
+  top: -1px;
+  left: -1px;
+
+  border-top: 2px solid var(--cyan);
+  border-left: 2px solid var(--cyan);
+
+  box-shadow:
+    -3px -3px 12px rgba(53, 230, 255, 0.18);
+}
+
+
+/* Top Right */
+
+.hero__corner--tr {
+  top: -1px;
+  right: -1px;
+
+  border-top: 2px solid var(--violet);
+  border-right: 2px solid var(--violet);
+
+  box-shadow:
+    3px -3px 12px rgba(168, 119, 255, 0.15);
+}
+
+
+/* Bottom Left */
+
+.hero__corner--bl {
+  bottom: -1px;
+  left: -1px;
+
+  border-bottom: 2px solid var(--cyan);
+  border-left: 2px solid var(--cyan);
+}
+
+
+/* Bottom Right */
+
+.hero__corner--br {
+  bottom: -1px;
+  right: -1px;
+
+  border-bottom: 2px solid var(--magenta);
+  border-right: 2px solid var(--magenta);
+
+  box-shadow:
+    3px 3px 12px rgba(215, 82, 255, 0.15);
+}
+
+
+/* =========================================================
+   Scan Line
+========================================================= */
+
+.hero__scan {
+  position: absolute;
+
+  left: 15px;
+  right: 15px;
+
+  top: 50%;
+
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(16, 62, 69, 0.55),
+    transparent
+  );
+
+  opacity: 0.3;
+
+  pointer-events: none;
+
+  z-index: 4;
+
+  animation: profileScan 4s ease-in-out infinite;
+}
+
+
+@keyframes profileScan {
+  0%,
+  100% {
+    transform: translateY(-75px);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0.35;
+  }
+
+  70% {
+    opacity: 0.35;
+  }
+
+  100% {
+    transform: translateY(75px);
+    opacity: 0;
+  }
+}
+
+
+/* =========================================================
+   Profile Label
+========================================================= */
+
+.hero__photo-label {
+  position: absolute;
+
+  right: 12px;
+  bottom: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  gap: 2px;
+
+  font-family: var(--font-mono);
+  font-size: 8px;
+
+  letter-spacing: 0.14em;
+
+  color: var(--cyan);
+
+  opacity: 0.75;
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
+
+.hero__photo-label span:last-child {
+  color: var(--text-faint);
+}
+
+/* =========================================================
+   Terminal
+========================================================= */
+
+.hero__visual .terminal {
+  width: 100%;
+}
+
+/* =========================================================
+   Terminal
+========================================================= */
+
+.hero__visual .terminal {
+  width: 100%;
+}
+
+
 
 /* =========================================================
    Section shared
